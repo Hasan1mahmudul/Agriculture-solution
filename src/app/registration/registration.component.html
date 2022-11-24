@@ -5,18 +5,20 @@
         <div class="info_fields">
             <label for="name">Name:</label>
             <input type="text" ngModel class="p-5 input-border" #name="ngModel" name="name" required>
-            <p>fdgdfhgdh</p>
+            <p *ngIf="!isNameValid">fdgdfhgdh</p>
         </div>
         <div class="info_fields">
             <label for="number">Number:</label>
             <input type="text" ngModel class="p-5 input-border" #number="ngModel" name="number" required>
+            <p *ngIf="!isNumberValid">fdgdfhgdh</p>
         </div>
         <div class="info_fields">
             <label for="district">District:</label>
-            <select id="" ngModel  class="p-5 input-border" #district="ngModel" name="district" required> 
-                <option>Select an option</option>
+            <select id=""  class="p-5 input-border" ngModel name="district" #district="ngModel"  required> 
+                <option value="">Select an option</option>
                 <option value="{{district}}" *ngFor="let district of districts  ">{{district}}</option>
             </select>
+            <p *ngIf="!isDistrictValid">fdgdfhgdh</p>
         </div>
     
         <div class="info_fields" class="d-flex ml-m-7">
@@ -27,7 +29,6 @@
             <button type="submit" style="padding: 10px;">Register</button>
         </div>
        
-    
     </form>
     
 </div>
