@@ -1,0 +1,35 @@
+
+<div class="user-registration-form">
+    <h1>Register Your ACCOUNT</h1>
+    <form #registerForm="ngForm" (submit)="registerData(registerForm.value)">
+        <div class="info_fields">
+            <label for="name">Name:</label>
+            <input type="text" ngModel class="p-5 input-border" #name="ngModel" name="name" required>
+            <p *ngIf="!isNameValid">*required field</p>
+        </div>
+        <div class="info_fields">
+            <label for="number">Number:</label>
+            <input type="text" ngModel class="p-5 input-border" #number="ngModel" name="number" required>
+            <p *ngIf="!isNumberValid">*required field</p>
+        </div>
+        <div class="info_fields">
+            <label for="district">District:</label>
+            <select id=""  class="p-5 input-border" ngModel name="district" #district="ngModel"  required> 
+                <option value="">Select an option</option>
+                <option value="{{district}}" *ngFor="let district of districts  ">{{district}}</option>
+            </select>
+            <p *ngIf="!isDistrictValid">*required field</p>
+        </div>
+    
+        <div class="info_fields" class="d-flex ml-m-7">
+            <label for="address" class="d-flex">Address:</label>
+           <textarea ngModel id="" cols="30" rows="10" class="input-border" #address="ngModel" name="address"></textarea>
+        </div>
+        <div class="buttons info_fields" style="justify-content:center !important;">
+            <button type="submit" style="padding: 10px;">Register</button>
+        </div>
+       
+    </form>
+    
+    
+</div>

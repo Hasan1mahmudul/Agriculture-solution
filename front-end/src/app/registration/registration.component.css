@@ -1,0 +1,36 @@
+.d-flex{
+    display: flex;
+    justify-content: center;
+}
+.p-5{
+    padding: 5px;
+}
+.ml-m-7{
+    margin-left: -7px !important;
+}
+.input-border{
+    outline: none;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+
+}
+.user-registration-form{
+    background: rgb(43, 139, 28);
+    width: fit-content;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    padding: 20px;
+}
+.info_fields{
+    padding: 20px;
+
+    /* display: flex;
+    align-items: center; */
+    /* justify-content: center; */
+    gap: 10px;
+}
+p{
+    color: red;
+}
